@@ -99,10 +99,31 @@ body {
 	padding-bottom: 24px;
 }
 
-.navigation-list .item:not(:last-child) {
+.navigation-list .navigation-list-item:not(:last-child) {
 	margin-right: 40px;
 }
+.navigation-list-item {
+	position: relative;
+}
+.navigation:active::after {
+	content: "";
 
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--brand-color);
+	border-radius: 2px;
+
+	/* opacity: 0;
+	transition: opacity var(--transition-dur-and-func); */
+}
+/* .navigation:hover::after {
+	opacity: 1;
+} */
 .navigation {
 	color: var(--secondary-color);
 	transition: color var(--transition-dur-and-func);
