@@ -121,7 +121,7 @@ body {
 	opacity: 1;
 } */
 
-.navigation.current-page:active::after {
+.current-page::after {
 	content: "";
 
 	position: absolute;
@@ -135,14 +135,6 @@ body {
 	border-radius: 2px;
 }
 
-/* .navigation.current-page {
-	color: var(--brand-color);
-} */
-
-.navigation.current-page:hover::after,
-.navigation.current-page:focus::after {
-	color: var(--secondary-color);
-}
 .navigation {
 	color: var(--secondary-color);
 	transition: color var(--transition-dur-and-func);
@@ -288,16 +280,18 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 8px;
 
 	width: 264px;
 	height: 112px;
+	border-radius: 4px;
 	background-color: var(--background-color);
 }
 .advantages-list-item:not(:last-child) {
 	margin-right: 24px;
 }
 .advantages-item {
-	text-align: center;
+	text-align: start;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
@@ -381,6 +375,7 @@ body {
 	justify-content: center;
 	gap: 24px;
 }
+
 .employee-social-link {
 	display: flex;
 	justify-content: center;
@@ -390,18 +385,17 @@ body {
 	height: 40px;
 	border-radius: 50%;
 	background-color: var(--brand-color);
-	transition: border-radius var(--transition-dur-and-func), outline var(--transition-dur-and-func);
+	transition: outline var(--transition-dur-and-func);
 }
+
+/* .employee-social-link:hover,
+.employee-social-link:focus {
+	outline: 2px solid var(--brand-color);
+} */
+
 .employee-social-list-icon {
 	fill: var(--background-color);
 }
-
-.employee-social-link:hover,
-.employee-social-link:focus {
-	outline: 1px solid var(--brand-color);
-	border-radius: 50%;
-}
-
 /* Our Customers */
 
 .customers {
@@ -426,13 +420,13 @@ body {
 	height: 88px;
 	border: 1px solid #8e8f99;
 	border-radius: 4px;
-	transition: outline var(--transition-dur-and-func), border-radius var(--transition-dur-and-func);
+	transition: outline var(--transition-dur-and-func), border var(--transition-dur-and-func);
 }
 
 .customers-link:hover,
 .customers-link:focus {
-	outline: 1px solid var(--brand-color);
-	border-radius: 4px;
+	border: 1px solid var(--brand-color);
+	outline: transparent;
 }
 
 .customers-link:hover .customers-list-icon,
